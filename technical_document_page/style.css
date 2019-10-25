@@ -1,0 +1,62 @@
+body {
+
+    font-family: 'Ubuntu', sans-serif;
+    color: #333333;
+    line-height: 2em;
+}
+
+#navbar {
+    border-style: solid;
+    border-color: rgba(0, 22, 22, 0.1);
+    border-width: thin;
+    position: fixed;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+main {
+    height: auto;
+    width: auto;
+    left: 0;
+    position: absolute;
+    margin-left: 20em;
+}
+
+header {
+    font-size: 1.5em;
+}
+
+#navbar header {
+    margin: 24px;
+}
+
+#navbar a {
+    margin: 10px;
+    margin-left: 24px;;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #333333;
+}
+
+a:hover {
+    color: darkturquoise;
+    text-decoration: underline;
+}
+
+code {
+    display: block;
+    padding: 10px;
+    background-color: #EEE;
+    font-family: 'Ubuntu Mono';
+}
+
+section {
+    margin: 20px;
+}
