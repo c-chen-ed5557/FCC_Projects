@@ -60,3 +60,25 @@ code {
 section {
     margin: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+    #navbar {
+        position: relative;
+        float: none; 
+        height: 30%;
+        width: 100%;
+        overflow: auto;
+    }
+    
+    main {
+        margin: 0;
+    }
+    
+    #navbar a {
+        margin-left: 30px;
+    }
+    
+    #navbar header {
+        margin-left: 30px;
+    }
+}
