@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>React Project</title>
+        <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        
+        
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+
+        
+            class App extends React.Component {
+                
+                state = {
+                    text: "",
+                    author: "",
+                    color: ""
+                }
+
+                requestQuote = async () => {
+                    const response = await fetch('https://api.quotable.io/random')
+                    const data = await response.json()
+                    this.setState({
+                        text: data.content,
+                        author: "- " + data.author
+                    })
+                }
+                
+                componentWillMount() {
+                    this.requestQuote();
+                }
+
+                componentDidUpdate() {
+                    document.getElementById("text").style.opacity = 1;
+                }
+        
+                render() {
+                    return (
+                        <div id="quote-box">
+                            <div id="text">{this.state.text}</div>
+                            <div id="author">{this.state.author}</div>
+                            <div id="button-container">
+                                <a id="tweet-quote" href="https://twitter.com/intent/tweet">
+                                    <i className="fab fa-twitter-square"></i>
+                                </a>
+                                
+                                 <a id="tumblr-quote" href="">
+                                    <i className="fab fa-tumblr-square"></i>
+                                </a>
+                                
+                                <button id="new quote" onClick={this.requestQuote}>New quote</button>
+                            </div>
+                            
+                        </div>
+                    )
+                }
+            }
+                
+            ReactDOM.render(
+                <App />,
+                document.getElementById("root")
+            );
+        </script>
+    </body>
+</html>

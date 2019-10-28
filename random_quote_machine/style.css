@@ -1,0 +1,70 @@
+html, body {
+    height: 100%;
+    font-family: Ubuntu;
+}
+
+#root {
+    height: 100%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    background-color: darksalmon;
+}
+
+#quote-box {
+    background-color: white;
+    width: 480px;
+    border-radius: 5px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#text {
+    font-size: 20pt;
+    font-weight: 400;
+    text-align: center;
+    width: 75%;
+    margin: 20px;
+    color: darksalmon;
+    opacity: 0;
+    transition: 1s;
+}
+
+#author {
+    width: 75%;
+    font-weight: 200;
+    text-align: right;
+    color: darksalmon;
+}
+
+button {
+    display: block;
+    height: 36px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: white;
+    left: 28%;
+    padding: 12px 20px;
+    border: none;
+    background-color: darksalmon;
+}
+
+#button-container {
+    width: 75%;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a i {
+    color: darksalmon;
+    font-size: 36px;
+}
+
+#tumblr-quote {
+    position: relative;
+    left: -96px;
+}
